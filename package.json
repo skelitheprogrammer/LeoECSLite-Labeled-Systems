@@ -1,0 +1,24 @@
+{
+  "name": "com.skillitronic.leoecslabeledsystems",
+  "displayName": "LeoECS Lite LabeledSystems",
+  "version": "0.0.1",
+  "description": "Label ordered system holder for LeoECS Lite",
+  "keywords": [
+    "unity",
+    "unity3d",
+    "upm",
+    "Skillitronic",
+    "Entity",
+    "Labeled",
+    "Systems",
+    "Label",
+    "Leopotam",
+    "LeoEcs",
+    "utility"
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
