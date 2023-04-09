@@ -5,7 +5,7 @@ using Leopotam.EcsLite;
 
 namespace Skillitronic.LeoECSLite.LabeledSystems
 {
-    public class EcsLabeledSystems : IEcsLabeledSystems
+    public sealed class EcsLabeledSystems : IEcsLabeledSystems
     {
         private readonly EcsWorld _defaultWorld;
         private readonly Dictionary<string, EcsWorld> _worlds;
@@ -32,7 +32,7 @@ namespace Skillitronic.LeoECSLite.LabeledSystems
             _sortedPostRunSystems = new();
         }
 
-        public IEcsLabeledSystems AddMarker(string markerName)
+        public IEcsLabeledSystems AddLabel(string markerName)
         {
             if (_labels.Contains(markerName))
             {
