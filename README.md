@@ -44,14 +44,13 @@ https://github.com/skelitheprogrammer/LeoECSLite-Events.git
 > Последовательность может быть произвольной, все зависит от архитектуры вашего приложения
 ```c#
   systems
-    .AddMarker("Start")
-    .AddMarker("Events")
-    .AddMarker("Event_Recievers")
-    .AddMarker("MainLoop")
-    .AddMarker("Cleanup")
-    
+    .AddLabel("Start")
+    .AddLabel("Events")
+    .AddLabel("Event_Recievers")
+    .AddLabel("MainLoop")
+    .AddLabel("Cleanup")
 ```
-## добавление систем
+## Добавление систем
 Порадок добавления не важен, важно правильно указать ярлыки
 ```c#
   ...
@@ -59,7 +58,7 @@ https://github.com/skelitheprogrammer/LeoECSLite-Events.git
     .AddAt(system: someSystem, "Events")
     .Add(system: otherSystem) // добавит к самому последнему маркеру
 ```
-
+> **ВАЖНО!** Вначале нужно добавить список ярлыков, а потом добавлять системы
 ## От автора
 - При создании данной реализации меня сподвигла идея Leopotam с его модульными системами.
 - В будущем я собираюсь улучшить способ создания маркеров, уйдя от прописывания string параметров. На данный момент могу только посоветовать создать enum с требуемыми маркерами, чтобы минимально защитить себя от ошибок (но система вас все равно предупредит о не верных аргументах)
